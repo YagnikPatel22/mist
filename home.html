@@ -5,75 +5,80 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Family Hub</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=SF+Pro:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=SF+Pro:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <nav class="navbar">
-        <div class="navbar-container">
-            <a href="#" class="navbar-logo">Family Hub</a>
-            <ul class="navbar-menu">
+    <!-- Translucent Navbar (Apple Style) -->
+    <nav class="apple-navbar">
+        <div class="apple-navbar-container">
+            <a href="#" class="apple-navbar-logo">🍎 Family Hub</a>
+            <ul class="apple-navbar-menu">
                 <li><a href="#hero">Home</a></li>
                 <li><a href="#docs">Documents</a></li>
                 <li><a href="#calendar">Calendar</a></li>
                 <li><a href="#gallery">Gallery</a></li>
             </ul>
-            <button class="theme-toggle"><i class="fas fa-moon"></i></button>
+            <button class="apple-theme-toggle"><i class="fas fa-moon"></i></button>
         </div>
     </nav>
 
-    <main>
-        <section id="hero" class="section">
-            <div class="container">
-                <h1 class="section-title">Welcome to Our Family Hub</h1>
-                <p class="section-subtitle">A private space for our most important moments and documents.</p>
-            </div>
-        </section>
+    <!-- Hero Section (Apple Style) -->
+    <section id="hero" class="apple-section">
+        <div class="apple-container">
+            <h1 class="apple-title">Welcome to Our Family Hub</h1>
+            <p class="apple-subtitle">A private space for our most important moments and documents.</p>
+        </div>
+    </section>
 
-        <section id="docs" class="section">
-            <div class="container">
-                <h2 class="section-title">Important Documents</h2>
-                <div class="doc-grid">
-                    <div class="doc-card">
-                        <i class="fas fa-passport"></i>
-                        <h3>Passport Copies</h3>
-                        <p>Updated 2025</p>
-                        <input type="file" class="upload-btn" data-doc="passport">
-                    </div>
-                    <div class="doc-card">
-                        <i class="fas fa-file-contract"></i>
-                        <h3>Insurance Policies</h3>
-                        <p>Updated 2025</p>
-                        <input type="file" class="upload-btn" data-doc="insurance">
-                    </div>
+    <!-- Documents Section (Symmetrical Grid) -->
+    <section id="docs" class="apple-section">
+        <div class="apple-container">
+            <h2 class="apple-title">Important Documents</h2>
+            <div class="apple-doc-grid">
+                <div class="apple-doc-card">
+                    <div class="apple-doc-icon">🛂</div>
+                    <h3>Passport Copies</h3>
+                    <p>Updated 2025</p>
+                    <input type="file" class="apple-upload-btn" data-doc="passport">
+                </div>
+                <div class="apple-doc-card">
+                    <div class="apple-doc-icon">📄</div>
+                    <h3>Insurance Policies</h3>
+                    <p>Updated 2025</p>
+                    <input type="file" class="apple-upload-btn" data-doc="insurance">
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <section id="calendar" class="section">
-            <div class="container">
-                <h2 class="section-title">Family Calendar</h2>
-                <div id="familyCalendar"></div>
+    <!-- Calendar Section -->
+    <section id="calendar" class="apple-section">
+        <div class="apple-container">
+            <h2 class="apple-title">Family Calendar</h2>
+            <div id="apple-family-calendar"></div>
+        </div>
+    </section>
+
+    <!-- Gallery Section (Symmetrical Grid) -->
+    <section id="gallery" class="apple-section">
+        <div class="apple-container">
+            <h2 class="apple-title">Family Gallery</h2>
+            <div class="apple-gallery-grid">
+                <img src="assets/images/family1.jpg" alt="Family Photo" class="apple-gallery-img">
+                <img src="assets/images/family2.jpg" alt="Family Photo" class="apple-gallery-img">
             </div>
-        </section>
+        </div>
+    </section>
 
-        <section id="gallery" class="section">
-            <div class="container">
-                <h2 class="section-title">Family Gallery</h2>
-                <div class="gallery-grid">
-                    <img src="assets/images/family1.jpg" alt="Family Photo" loading="lazy">
-                    <img src="assets/images/family2.jpg" alt="Family Photo" loading="lazy">
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer class="section">
-        <div class="container">
+    <!-- Footer -->
+    <footer class="apple-footer">
+        <div class="apple-container">
             <p>For family use only. &copy; 2025</p>
         </div>
     </footer>
 
+    <!-- FullCalendar JS -->
     <script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/main.min.js"></script>
     <script src="script.js"></script>
 </body>
