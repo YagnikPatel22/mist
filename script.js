@@ -1,8 +1,8 @@
 // Dark Mode Toggle
-document.querySelector('.theme-toggle').addEventListener('click', () => {
+document.querySelector('.apple-theme-toggle').addEventListener('click', () => {
     const body = document.body;
     const currentTheme = body.getAttribute('data-theme');
-    const themeIcon = document.querySelector('.theme-toggle i');
+    const themeIcon = document.querySelector('.apple-theme-toggle i');
 
     if (currentTheme === 'dark') {
         body.removeAttribute('data-theme');
@@ -18,29 +18,26 @@ document.querySelector('.theme-toggle').addEventListener('click', () => {
 // Check for saved theme
 if (localStorage.getItem('theme') === 'dark') {
     document.body.setAttribute('data-theme', 'dark');
-    document.querySelector('.theme-toggle i').className = 'fas fa-sun';
+    document.querySelector('.apple-theme-toggle i').className = 'fas fa-sun';
 }
 
-// Scroll Animations
-const sections = document.querySelectorAll('.section');
+// Scroll Animations (Apple Style)
+const appleSections = document.querySelectorAll('.apple-section');
 
 const appearOptions = {
-    threshold: 0.2,
+    threshold: 0.1,
     rootMargin: "0px 0px -50px 0px"
 };
 
 const appearOnScroll = new IntersectionObserver((entries, appearOnScroll) => {
     entries.forEach(entry => {
-        if (!entry.isIntersecting) {
-            return;
-        } else {
-            entry.target.classList.add('visible');
-            appearOnScroll.unobserve(entry.target);
-        }
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add('visible');
+        appearOnScroll.unobserve(entry.target);
     });
 }, appearOptions);
 
-sections.forEach(section => {
+appleSections.forEach(section => {
     appearOnScroll.observe(section);
 });
 
@@ -55,8 +52,8 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 });
 
 // Initialize Calendar
-if (document.getElementById('familyCalendar')) {
-    const calendarEl = document.getElementById('familyCalendar');
+if (document.getElementById('apple-family-calendar')) {
+    const calendarEl = document.getElementById('apple-family-calendar');
     const calendar = new FullCalendar.Calendar(calendarEl, {
         initialView: 'dayGridMonth',
         events: [
@@ -73,7 +70,7 @@ if (document.getElementById('familyCalendar')) {
 }
 
 // Document Upload
-document.querySelectorAll('.upload-btn').forEach(button => {
+document.querySelectorAll('.apple-upload-btn').forEach(button => {
     button.addEventListener('change', function(e) {
         const docName = this.getAttribute('data-doc');
         const file = e.target.files[0];
