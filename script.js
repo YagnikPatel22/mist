@@ -1,15 +1,21 @@
 // Login Logic
-document.getElementById('loginForm')?.addEventListener('submit', function(e) {
-    e.preventDefault();
-    const password = document.getElementById('password').value;
-    const errorMsg = document.getElementById('errorMsg');
+document.addEventListener('DOMContentLoaded', function() {
+    const loginForm = document.getElementById('loginForm');
+    if (loginForm) {
+        loginForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            const password = document.getElementById('password').value;
+            const errorMsg = document.getElementById('errorMsg');
 
-    if (password === 'Yagnik10') {
-        window.location.href = 'home.html';
-    } else {
-        errorMsg.textContent = 'Incorrect password. Please try again.';
+            if (password === 'Yagnik10') {
+                window.location.href = 'home.html';
+            } else {
+                errorMsg.textContent = 'Incorrect password. Please try again.';
+            }
+        });
     }
 });
+
 
 // Dark Mode Toggle
 const themeButton = document.getElementById('themeButton');
