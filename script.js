@@ -52,8 +52,8 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 });
 
 // Initialize Calendar
-if (document.getElementById('apple-family-calendar')) {
-    const calendarEl = document.getElementById('apple-family-calendar');
+if (document.getElementById('apple-calendar')) {
+    const calendarEl = document.getElementById('apple-calendar');
     const calendar = new FullCalendar.Calendar(calendarEl, {
         initialView: 'dayGridMonth',
         events: [
